@@ -1,0 +1,21 @@
+{
+	"languageserver": {
+		// PHP
+		"intelephense": {
+			"command": "intelephense",
+			"args": ["--stdio"],
+			"filetypes": ["php"],
+			"initializationOptions": {
+				"storagePath": "/tmp/intelephense"
+			}
+		}
+	},
+	// Python
+	"python.jediEnabled": false,
+	"python.autoComplete.addBrackets": true,
+	"pairs.enableCharacters": ["(", "[", "{", "<", "'", "\""],
+	// Golang
+	"go.goplsOptions": {
+		"completionDocumentation": true
+	}
+}
