@@ -25,11 +25,6 @@ set number relativenumber
 " Clipboard yank to clipboard (or use "+y)
 set clipboard+=unnamedplus
 
-" Better Term Colors
-" let base16colorspace=256
-" let g:solarized_termcolors=256
-" set termguicolors
-
 " Other
 set path+=** 	" find files in ur home path
 
