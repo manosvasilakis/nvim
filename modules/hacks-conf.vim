@@ -43,15 +43,9 @@ autocmd BufWritepre * %s/\n\+\%$//e
 " Disables automatic commenting on newline:
 " autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
-" Move arround splits
- map <leader>h :wincmd h<CR>
- map <leader>j :wincmd j<CR>
- map <leader>k :wincmd k<CR>
- map <leader>l :wincmd l<CR>
-
 " Highlight tabs with '>····>'
-set list
-set listchars=tab:>->,trail:_
+" set list
+" set listchars=tab:>->,trail:_
 
 " Add newline and tab after { }
 inoremap <expr> <CR> InsertMapForEnter()
