@@ -5,8 +5,9 @@ set encoding=utf-8
 set fileencoding=utf-8
 
 " Built in Search Improvments
-set incsearch 	" incremental search - show results while typing
 set hlsearch 	" set nohlsearch " hightlight results
+set incsearch 	" incremental search - show results while typing
+set smartcase   " switch to case-sensitive search when uppercase letter is in your search term
 
 " Syntax
 syntax on
@@ -14,20 +15,19 @@ filetype plugin indent on " use the file type to determine the correct identatio
 set showmatch 	" highlight matched parens, brackets, beginning and end of code blocks
 set mouse=a 		" mouse support in 'a'll modes
 
+" Clipboard yank to clipboard (or use "+y)
+set clipboard+=unnamedplus
+
 " Tabs vs Spaces
 " set noexpandtab
 " set tabstop=2
 " set shiftwidth=2
 
-" Set Relative line Numbers
-set number relativenumber
+" Performance
+" set lazyredraw  " Don’t update screen during macro and script execution.
 
-" Clipboard yank to clipboard (or use "+y)
-set clipboard+=unnamedplus
-
-" Other
+" Searching
 set path+=** 	" find files in ur home path
-
 " Tweaks for browsing:
 let g:netrw_banner=0 		" disable annoying banner.
 let g:netrw_browse_split=4	" open in prior windows.
@@ -36,6 +36,10 @@ let g:netrw_liststyle=3		" tree view
 let g:netrw_list_hide=netrw_gitignore#Hide()
 let g:netrw_list_hide.=',\(^\|\s\s)\zs\.\S\+'
 set nowrap " hide eol when doesn't fit
+
+
+" Interface Options
+set number relativenumber " Set Relative line Numbers
 
 " Move arround splits
 map <leader>h :wincmd h<CR>

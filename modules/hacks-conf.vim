@@ -88,3 +88,6 @@ function LargeFile()
  " display message
  autocmd VimEnter *  echo "The file is larger than " . (g:LargeFile / 1024 / 1024) . " MB, so some options are changed (see .vimrc for details)."
 endfunction
+
+" Autocompile & refresh dwmblocks
+autocmd BufWritePost ~/.local/src/nazicode/dwmblocks/blocks.h !cd ~/.local/src/nazicode/dwmblocks/; sudo make install && { killall -q dwmblocks;setsid dwmblocks & }

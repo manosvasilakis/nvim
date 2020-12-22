@@ -16,7 +16,6 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'matze/vim-move'			" Drag Lines Arround suckit VScode
 	" Polishing
 	Plug 'gruvbox-community/gruvbox'	" best colorscheme known to human
-	Plug 'frazrepo/vim-rainbow'             " colorful brackets
 	Plug 'vim-airline/vim-airline'		" statusbar
 	Plug 'scrooloose/nerdtree'		" files tree
 	Plug 'ryanoasis/vim-devicons'		" Devicons VScode suckit
@@ -38,6 +37,5 @@ source ~/.config/nvim/modules/vimmove-conf.vim
 
 "" Polishing
 source ~/.config/nvim/modules/gruvbox-conf.vim
-source ~/.config/nvim/modules/rainbow-conf.vim
 source ~/.config/nvim/modules/airline-conf.vim
 source ~/.config/nvim/modules/nerdtree-conf.vim

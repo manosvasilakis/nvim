@@ -115,3 +115,7 @@ autocmd BufWritePre *.go :silent call CocAction('runCommand', 'editor.action.org
 
 " Toggle Coc-Terminal
 map <F2> :CocCommand terminal.Toggle<CR>
+
+" Disable Coc in certain filetypes (C/C++)
+autocmd BufNew,BufEnter *.c execute "silent! CocDisable"
+autocmd BufNew,BufEnter *.cpp execute "silent! CocDisable"
