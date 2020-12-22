@@ -19,6 +19,7 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'vim-airline/vim-airline'		" statusbar
 	Plug 'scrooloose/nerdtree'		" files tree
 	Plug 'ryanoasis/vim-devicons'		" Devicons VScode suckit
+	Plug 'norcalli/nvim-colorizer.lua'      " Display Colors
 	Plug 'junegunn/goyo.vim'		" Distraction-free writing in Vim
 call plug#end()
 
@@ -39,3 +40,4 @@ source ~/.config/nvim/modules/vimmove-conf.vim
 source ~/.config/nvim/modules/gruvbox-conf.vim
 source ~/.config/nvim/modules/airline-conf.vim
 source ~/.config/nvim/modules/nerdtree-conf.vim
+lua require'colorizer'.setup()
