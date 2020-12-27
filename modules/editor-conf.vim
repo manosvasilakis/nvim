@@ -89,3 +89,6 @@ map ω v
 
 " Compile R markdown
 autocmd Filetype rmd map <F5> :!echo<space>"require(rmarkdown);<space>render('<c-r>%')"<space>\|<space>R<space>--vanilla<enter>
+
+" Remove Statusbar
+set laststatus=0 ruler
