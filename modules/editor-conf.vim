@@ -60,6 +60,9 @@ imap <down> <nop>
 imap <left> <nop>
 imap <right> <nop>
 
+" Home key goes on first word, same with 0
+nmap <Home> 0w
+
 " Make greek letters usable in all modes,
 " except Insert mode
 map α a
