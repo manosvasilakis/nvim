@@ -12,8 +12,10 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'tpope/vim-surround'               " cs[{, ds', ysW(, ...
 	Plug 'turbio/bracey.vim'		" Live Server
 	" Generic
-	Plug 'junegunn/fzf.vim'			" Fuzzy Finder fzf
 	Plug 'matze/vim-move'			" Drag Lines Arround suckit VScode
+	Plug 'junegunn/fzf', {'dir': '~/.local/share/fzf','do': './install --all'}
+	Plug 'junegunn/fzf.vim'                 " needed for previews
+	Plug 'antoinemadec/coc-fzf', {'branch': 'release'}
 	" Polishing
 	Plug 'gruvbox-community/gruvbox'	" best colorscheme known to human
 	Plug 'scrooloose/nerdtree'		" files tree
@@ -32,7 +34,6 @@ source ~/.config/nvim/modules/coc-conf.vim
 source ~/.config/nvim/modules/emmet-conf.vim
 
 "" Text Manipulation & Movements
-source ~/.config/nvim/modules/fzf-conf.vim
 source ~/.config/nvim/modules/vimmove-conf.vim
 
 "" Polishing
