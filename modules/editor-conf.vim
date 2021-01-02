@@ -93,5 +93,33 @@ map ω v
 " Compile R markdown
 autocmd Filetype rmd map <F5> :!echo<space>"require(rmarkdown);<space>render('<c-r>%')"<space>\|<space>R<space>--vanilla<enter>
 
+" Autocompile & refresh dwmblocks
+autocmd BufWritePost ~/.local/src/nazicode/dwmblocks/blocks.h !cd ~/.local/src/nazicode/dwmblocks/; sudo make install && { killall -q dwmblocks;setsid dwmblocks & }
+
 " Remove Statusbar
 set laststatus=0 ruler
+
+" Manage Large file >= 5mb (https://vim.fandom.com/wiki/Faster_loading_of_large_files)
+" " file is large from 10mb
+let g:LargeFile = 1024 * 1024 * 5
+augroup LargeFile
+ autocmd BufReadPre * let f=getfsize(expand("<afile>")) | if f > g:LargeFile || f == -2 | call LargeFile() | endif
+augroup END
+
+function LargeFile()
+ " no syntax highlighting etc
+ set eventignore+=FileType
+ " save memory when other file is viewed
+ setlocal bufhidden=unload
+ " is read-only (write with :w new_filename)
+ setlocal buftype=nowrite
+ " no undo possible
+ setlocal undolevels=-1
+ " disable coc
+ CocDisable
+ " display message
+ autocmd VimEnter *  echo "The file is larger than " . (g:LargeFile / 1024 / 1024) . " MB, so some options are changed (see .vimrc for details)."
+endfunction
+
+" Brodie center screen trick
+" autocmd InsertEnter * norm zz
