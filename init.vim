@@ -10,9 +10,9 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'mattn/emmet-vim'			" Emmet Snippets
 	Plug 'tpope/vim-commentary' 		" Comment stuff out. gcc - gc - gcap - etc...
 	Plug 'tpope/vim-surround'               " cs[{, ds', ysW(, ...
-	Plug 'turbio/bracey.vim'		" Live Server
 	" Generic
 	Plug 'matze/vim-move'			" Drag Lines Arround suckit VScode
+	Plug 'terryma/vim-multiple-cursors'     " :)
 	Plug 'junegunn/fzf', {'dir': '~/.local/share/fzf','do': './install --all'}
 	Plug 'junegunn/fzf.vim'                 " needed for previews
 	Plug 'antoinemadec/coc-fzf', {'branch': 'release'}

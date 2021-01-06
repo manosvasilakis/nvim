@@ -94,7 +94,7 @@ map ω v
 autocmd Filetype rmd map <F5> :!echo<space>"require(rmarkdown);<space>render('<c-r>%')"<space>\|<space>R<space>--vanilla<enter>
 
 " Autocompile & refresh dwmblocks
-autocmd BufWritePost ~/.local/src/nazicode/dwmblocks/blocks.h !cd ~/.local/src/nazicode/dwmblocks/; sudo make install && { killall -q dwmblocks;setsid dwmblocks & }
+autocmd BufWritePost ~/.local/src/suckless/dwmblocks/blocks.h !cd ~/.local/src/nazicode/dwmblocks/; sudo make install && { killall -q dwmblocks;setsid dwmblocks & }
 
 " Remove Statusbar
 set laststatus=0 ruler

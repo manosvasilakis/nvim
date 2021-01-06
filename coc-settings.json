@@ -10,12 +10,10 @@
 			}
 		}
 	},
-	// Python
-	"python.jediEnabled": false,
-	"python.autoComplete.addBrackets": true,
-	"pairs.enableCharacters": ["(", "[", "{", "<", "'", "\""],
 	// Golang
 	"go.goplsOptions": {
 		"completionDocumentation": true
-	}
+	},
+	// webdev
+	"html.autoClosingTags": true
 }
