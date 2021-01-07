@@ -41,6 +41,7 @@ source ~/.config/nvim/modules/vimmove-conf.vim
 "" Generic
 source ~/.config/nvim/modules/goyo-conf.vim
 source ~/.config/nvim/modules/vimwiki-conf.vim
+source ~/.config/nvim/modules/vimtablemode-conf.vim
 
 "" Polishing
 source ~/.config/nvim/modules/gruvbox-conf.vim

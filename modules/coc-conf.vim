@@ -119,3 +119,7 @@ map <F2> :CocCommand terminal.Toggle<CR>
 " Disable Coc in certain filetypes (C/C++)
 autocmd BufNew,BufEnter *.c execute "silent! CocDisable"
 autocmd BufNew,BufEnter *.cpp execute "silent! CocDisable"
+
+" Spell Check (greek too finally!)
+vmap <leader>a <Plug>(coc-codeaction-selected)
+nmap <leader>a <Plug>(coc-codeaction-selected)
