@@ -1,3 +1,6 @@
+" let g:table_mode_corner='|'
+" let g:table_mode_corner_corner='+'
+
 function! s:isAtStartOfLine(mapping)
   let text_before_cursor = getline('.')[0 : col('.')-1]
   let mapping_pattern = '\V' . escape(a:mapping, '\')

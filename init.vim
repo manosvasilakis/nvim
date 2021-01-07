@@ -1,3 +1,15 @@
+" ██╗   ██╗██╗███████╗██╗   ██╗ █████╗ ██╗
+" ██║   ██║██║██╔════╝██║   ██║██╔══██╗██║
+" ██║   ██║██║███████╗██║   ██║███████║██║
+" ╚██╗ ██╔╝██║╚════██║██║   ██║██╔══██║██║
+"  ╚████╔╝ ██║███████║╚██████╔╝██║  ██║███████╗
+"   ╚═══╝  ╚═╝╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚══════╝
+" ███████╗██████╗ ██╗████████╗ ██████╗ ██████╗	     ██╗   ██╗██╗
+" ██╔════╝██╔══██╗██║╚══██╔══╝██╔═══██╗██╔══██╗	     ██║   ██║██║
+" █████╗  ██║  ██║██║   ██║   ██║   ██║██████╔╝	     ██║   ██║██║
+" ██╔══╝  ██║  ██║██║   ██║   ██║   ██║██╔══██╗	     ╚██╗ ██╔╝██║
+" ███████╗██████╔╝██║   ██║   ╚██████╔╝██║  ██║	      ╚████╔╝ ██║
+" ╚══════╝╚═════╝ ╚═╝   ╚═╝    ╚═════╝ ╚═╝  ╚═╝	       ╚═══╝  ╚═╝ config.
 let mapleader = ","
 
 " Get Plug
@@ -16,8 +28,8 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'junegunn/fzf', {'dir': '~/.local/share/fzf','do': './install --all'}
 	Plug 'junegunn/fzf.vim'                 " needed for previews
 	Plug 'antoinemadec/coc-fzf', {'branch': 'release'}
-	Plug 'vimwiki/vimwiki'                  " Until org mode, will do the trick.
-	Plug 'dhruvasagar/vim-table-mode'       " Easy Ascii Tables
+	Plug 'vimwiki/vimwiki'                  " Until org mode, will do the trick. ,ww -
+	Plug 'dhruvasagar/vim-table-mode'       " Easy Ascii Tables. ,tm -
 	" Polishing
 	Plug 'gruvbox-community/gruvbox'	" best colorscheme known to human
 	Plug 'scrooloose/nerdtree'		" files tree
