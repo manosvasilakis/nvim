@@ -16,6 +16,7 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'junegunn/fzf', {'dir': '~/.local/share/fzf','do': './install --all'}
 	Plug 'junegunn/fzf.vim'                 " needed for previews
 	Plug 'antoinemadec/coc-fzf', {'branch': 'release'}
+	Plug 'vimwiki/vimwiki'                  " Until org mode...
 	" Polishing
 	Plug 'gruvbox-community/gruvbox'	" best colorscheme known to human
 	Plug 'scrooloose/nerdtree'		" files tree
@@ -35,6 +36,10 @@ source ~/.config/nvim/modules/emmet-conf.vim
 
 "" Text Manipulation & Movements
 source ~/.config/nvim/modules/vimmove-conf.vim
+
+"" Generic
+source ~/.config/nvim/modules/goyo-conf.vim
+source ~/.config/nvim/modules/vimwiki-conf.vim
 
 "" Polishing
 source ~/.config/nvim/modules/gruvbox-conf.vim
