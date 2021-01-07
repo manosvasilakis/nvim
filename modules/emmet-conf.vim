@@ -1,8 +1,8 @@
 "" Emmet
 " only in insert mode
 let g:user_emmet_mode='i'
-" just in html & css
 let g:user_emmet_install_global = 0
-autocmd FileType html,css EmmetInstall
+let g:user_emmet_leader_key='<C-Z>'
+autocmd FileType html,css,php,js EmmetInstall
 " tab instead of this <C-Y>, crap
-imap <expr> <C-z> emmet#expandAbbrIntelligent("\<tab>")
+" imap <expr> <C-z> emmet#expandAbbrIntelligent("\<tab>")
