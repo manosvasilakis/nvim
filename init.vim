@@ -23,6 +23,7 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'tpope/vim-commentary' 		" Comment stuff out. gcc - gc - gcap - etc...
 	Plug 'tpope/vim-surround'               " cs[{, ds', ysW(, ...
 	" Generic
+	Plug 'mbbill/undotree'                  " Useful emacs bloat
 	Plug 'matze/vim-move'			" Drag Lines Arround suckit VScode
 	Plug 'terryma/vim-multiple-cursors'     " :)
 	Plug 'junegunn/fzf', {'dir': '~/.local/share/fzf','do': './install --all'}
@@ -49,6 +50,7 @@ source ~/.config/nvim/modules/emmet-conf.vim
 
 "" Text Manipulation & Movements
 source ~/.config/nvim/modules/vimmove-conf.vim
+source ~/.config/nvim/modules/undotree-conf.vim
 
 "" Generic
 source ~/.config/nvim/modules/goyo-conf.vim

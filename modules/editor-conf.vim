@@ -1,3 +1,5 @@
+" if found custom vimrc in project dir use it
+set exrc
 " ---- Make the editor usable in 2020 ----
 set nocompatible
 " Encoding
@@ -5,9 +7,9 @@ set encoding=utf-8
 set fileencoding=utf-8
 
 " Built in Search Improvments
-set hlsearch 	" set nohlsearch " hightlight results
+set hlsearch 	" set nohlsearch :noh " hightlight results
 set incsearch 	" incremental search - show results while typing
-set smartcase   " switch to case-sensitive search when uppercase letter is in your search term
+" set smartcase   " switch to case-sensitive search when uppercase letter is in your search term
 
 " Syntax
 syntax on
@@ -18,6 +20,9 @@ set mouse=a 		" mouse support in 'a'll modes
 " Clipboard yank to clipboard (or use "+y)
 set clipboard+=unnamedplus
 
+" Long lines
+set nowrap " hide eol when doesn't fit
+
 " Tabs vs Spaces
 " set noexpandtab
 " set tabstop=2
@@ -25,6 +30,7 @@ set clipboard+=unnamedplus
 
 " Performance
 " set lazyredraw  " Don’t update screen during macro and script execution.
+set hidden " cant explain it :h hidden :)
 
 " Searching
 set path+=** 	" find files in ur home path
@@ -35,8 +41,6 @@ let g:netrw_altv=1		" open splits to right.
 let g:netrw_liststyle=3		" tree view
 let g:netrw_list_hide=netrw_gitignore#Hide()
 let g:netrw_list_hide.=',\(^\|\s\s)\zs\.\S\+'
-set nowrap " hide eol when doesn't fit
-
 
 " Interface Options
 set number relativenumber " Set Relative line Numbers
@@ -60,41 +64,75 @@ imap <down> <nop>
 imap <left> <nop>
 imap <right> <nop>
 
-" Home key goes on first word, same with 0
+" Home key goes on first word
 nmap <Home> 0w
 
 " Make greek letters usable in all modes,
 " except Insert mode
 map α a
+map Α A
 map β b
-map γ c
+map Β B
+map γ g
+map Γ G
 map δ d
+map Δ D
 map ε e
+map Ε E
 map ζ z
+map Ζ Z
 map η h
+map Η H
 map θ u
+map Θ U
 map ι i
+map Ι I
 map κ k
+map Κ K
 map λ l
+map Λ L
 map μ m
+map Μ M
 map ν n
+map Ν N
 map ξ j
+map Ξ J
 map ο o
+map Ο Ο
 map π p
+map Π P
 map ρ r
+map Ρ R
 map σ s
+map Σ S
+map ς w
 map τ t
+map Τ T
 map υ y
-map χ x
+map Υ Y
 map φ f
+map Φ F
+map χ x
+map Χ X
 map ψ c
+map Ψ C
 map ω v
+map Ω V
+" map ; q
+" map : ρ
+" map ´ ;
+" map ¨ :
 
 " Compile R markdown
 autocmd Filetype rmd map <F5> :!echo<space>"require(rmarkdown);<space>render('<c-r>%')"<space>\|<space>R<space>--vanilla<enter>
 
 " Autocompile & refresh dwmblocks
-autocmd BufWritePost ~/.local/src/suckless/dwmblocks/blocks.h !cd ~/.local/src/nazicode/dwmblocks/; sudo make install && { killall -q dwmblocks;setsid dwmblocks & }
+autocmd BufWritePost ~/.local/src/suckless/dwmblocks/blocks.h !cd ~/.local/src/suckless/dwmblocks/; sudo make install && { killall -q dwmblocks;setsid dwmblocks & }
+" Autocompile dwm
+autocmd BufWritePost ~/.local/src/suckless/dwm/dwm/config.h !cd ~/.local/src/suckless/dwm/dwm/; sudo make install
+autocmd BufWritePost ~/.local/src/suckless/dwm/dwm/dwm.c !cd ~/.local/src/suckless/dwm/dwm/; sudo make install
+" Autocompile st & refresh xrdb
+autocmd BufWritePost ~/.local/src/suckless/st/config.h !cd ~/.local/src/suckless/st/; sudo make install
 
 " Remove Statusbar
 set laststatus=0 ruler
