@@ -45,6 +45,9 @@ let g:netrw_list_hide.=',\(^\|\s\s)\zs\.\S\+'
 " Interface Options
 set number relativenumber " Set Relative line Numbers
 
+" Scrolling
+set scrolloff=8
+
 " Move arround splits
 map <leader>h :wincmd h<CR>
 map <leader>j :wincmd j<CR>
