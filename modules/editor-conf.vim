@@ -128,6 +128,8 @@ map Ω V
 
 " Compile R markdown
 autocmd Filetype rmd map <F5> :!echo<space>"require(rmarkdown);<space>render('<c-r>%')"<space>\|<space>R<space>--vanilla<enter>
+" Compile Latex
+autocmd FileType tex map <F5> :!pdflatex %<enter>
 
 " Autocompile & refresh dwmblocks
 autocmd BufWritePost ~/.local/src/suckless/dwmblocks/blocks.h !cd ~/.local/src/suckless/dwmblocks/; sudo make install && { killall -q dwmblocks;setsid dwmblocks & }
