@@ -15,7 +15,7 @@ set incsearch 	" incremental search - show results while typing
 syntax on
 filetype plugin indent on " use the file type to determine the correct identation per lang
 set showmatch 	" highlight matched parens, brackets, beginning and end of code blocks
-set mouse=a 		" mouse support in 'a'll modes
+set mouse=a 	" mouse support in 'a'll modes
 
 " Clipboard yank to clipboard (or use "+y)
 set clipboard+=unnamedplus
@@ -48,11 +48,17 @@ set number relativenumber " Set Relative line Numbers
 " Scrolling
 set scrolloff=8
 
+"" Splits
 " Move arround splits
 map <leader>h :wincmd h<CR>
 map <leader>j :wincmd j<CR>
 map <leader>k :wincmd k<CR>
 map <leader>l :wincmd l<CR>
+" Resize Splits
+map <leader>L :vertical res +5<CR>
+map <leader>K :res -5<CR>
+map <leader>J :res +5<CR>
+map <leader>H :vertical res -5<CR>
 
 " Disable Arrow keys in all modes, use hjkl
 " Disable Arrow keys in Normal mode
@@ -152,18 +158,18 @@ augroup LargeFile
 augroup END
 
 function LargeFile()
- " no syntax highlighting etc
- set eventignore+=FileType
- " save memory when other file is viewed
- setlocal bufhidden=unload
- " is read-only (write with :w new_filename)
- setlocal buftype=nowrite
- " no undo possible
- setlocal undolevels=-1
- " disable coc
- CocDisable
- " display message
- autocmd VimEnter *  echo "The file is larger than " . (g:LargeFile / 1024 / 1024) . " MB, so some options are changed (see .vimrc for details)."
+	 " no syntax highlighting etc
+	 set eventignore+=FileType
+	 " save memory when other file is viewed
+	 setlocal bufhidden=unload
+	 " is read-only (write with :w new_filename)
+	 setlocal buftype=nowrite
+	 " no undo possible
+	 setlocal undolevels=-1
+	 " disable code completion
+	 CocDisable
+	 " display message
+	 autocmd VimEnter *  echo "The file is larger than " . (g:LargeFile / 1024 / 1024) . " MB, so some options are changed (see .vimrc for details)."
 endfunction
 
 " Brodie center screen trick
@@ -177,3 +183,71 @@ cnoremap w!! execute 'silent! write !sudo tee % >/dev/null' <bar> edit!
 
 " Spell-check set to <leader>o, 'o' for 'orthography':
 map <leader>o :setlocal spell! spelllang=el<CR>
+
+" True Colors
+if exists('+termguicolors')
+  let &t_8f = "\<ESC>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<ESC>[48;2;%lu;%lu;%lum"
+endif
+" Better Term Colors
+let base16colorspace=256
+let g:solarized_termcolors=256
+set termguicolors
+
+" Snippets
+nnoremap .py2     :-1read $HOME/.config/nvim/skeletons/py2skeleton<CR>ja
+nnoremap .py3     :-1read $HOME/.config/nvim/skeletons/py3skeleton<CR>ja
+nnoremap .sh      :-1read $HOME/.config/nvim/skeletons/sh<CR>ja
+nnoremap .bash    :-1read $HOME/.config/nvim/skeletons/bash<CR>ja
+nnoremap .zsh     :-1read $HOME/.config/nvim/skeletons/zsh<CR>ja
+nnoremap .go      :-1read $HOME/.config/nvim/skeletons/goskeleton<CR>4j3l
+nnoremap .printf  :-1read $HOME/.config/nvim/skeletons/Printf<CR>
+nnoremap .!       :-1read $HOME/.config/nvim/skeletons/html/htmlskeleton<CR>12jwf>a
+nnoremap .hlink   :-1read $HOME/.config/nvim/skeletons/html/link<CR>
+nnoremap .hstyle  :-1read $HOME/.config/nvim/skeletons/html/style<CR>
+
+" Replace all is aliased to S.
+nnoremap S :%s//g<Left><Left>
+
+" Automatically deletes all trailing whitespace on save.
+autocmd BufWritePre * %s/\s\+$//e
+autocmd BufWritepre * %s/\n\+\%$//e
+
+" Add newline and tab after { }
+inoremap <expr> <CR> InsertMapForEnter()
+function! InsertMapForEnter()
+	if pumvisible()
+		return "\<C-y>"
+	elseif strcharpart(getline('.'),getpos('.')[2]-1,1) == '}'
+		return "\<CR>\<Esc>O"
+	elseif strcharpart(getline('.'),getpos('.')[2]-1,2) == '</'
+		return "\<CR>\<Esc>O"
+	elseif strcharpart(getline('.'),getpos('.')[2]-1,1) == ']'
+		return "\<CR>\<Esc>O"
+	elseif strcharpart(getline('.'),getpos('.')[2]-1,1) == ')'
+		return "\<CR>\<Esc>O"
+	else
+		return "\<CR>"
+	endif
+endfunction
+
+" ColorColumn
+highlight ColorColumn ctermbg=magenta
+" set colorcolumn=81
+call matchadd('ColorColumn', '\%81v', 100)
+
+" Bury the following somewhere deep inside someones vimrc:
+" highlight ColorColumn ctermbg=red ctermfg=blue
+" exec 'set colorcolumn='.join(range(2,80,3), ',')
+
+" Map Ctrl-Backspace to delete the previous word in insert mode.
+" Mapping Ctrl-Backspace does not work in terminal Vim. Following is a workaround.
+noremap! <C-BS> <C-w>
+noremap! <C-h> <C-w>
+
+" Life Hack - remap : to ; and don't have to press SHIFT ever again <3
+nnoremap ; :
+
+" Highlight tabs with '>····>'
+" set list
+" set listchars=tab:>->,trail:_
