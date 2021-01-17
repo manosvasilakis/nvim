@@ -126,11 +126,11 @@ map Ω V
 " map ´ ;
 " map ¨ :
 
-" Compile R markdown
+" Compile R markdown to pdf
 autocmd Filetype rmd map <F5> :!echo<space>"require(rmarkdown);<space>render('<c-r>%')"<space>\|<space>R<space>--vanilla<enter>
-" Compile Latex
+" Compile Latex to pdf
 autocmd FileType tex map <F5> :!pdflatex %<enter>
-" Compile TypeScript
+" Compile TypeScript to JavaScript
 autocmd FileType ts map <F5> :!tsc %<enter>
 
 " Autocompile & refresh dwmblocks

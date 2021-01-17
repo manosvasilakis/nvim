@@ -60,4 +60,7 @@ source ~/.config/nvim/modules/vimtablemode-conf.vim
 "" Polishing
 source ~/.config/nvim/modules/gruvbox-conf.vim
 source ~/.config/nvim/modules/nerdtree-conf.vim
+
+"" Other configurations that do not need a custom file
+map <M-z> :FZF<CR>
 lua require'colorizer'.setup()
