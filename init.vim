@@ -31,6 +31,7 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'antoinemadec/coc-fzf', {'branch': 'release'}
 	Plug 'vimwiki/vimwiki'                  " Until org mode, will do the trick. ,ww -
 	Plug 'dhruvasagar/vim-table-mode'       " Easy Ascii Tables. ,tm -
+	Plug 'KabbAmine/vCoolor.vim'            " Color Picker
 	" Polishing
 	Plug 'gruvbox-community/gruvbox'	" best colorscheme known to human
 	Plug 'scrooloose/nerdtree'		" files tree
@@ -41,7 +42,6 @@ call plug#end()
 
 " Vim Essentials
 source ~/.config/nvim/modules/editor-conf.vim
-source ~/.config/nvim/modules/hacks-conf.vim
 
 " Plugin Configuration Modules
 "" Programming

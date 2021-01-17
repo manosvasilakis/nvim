@@ -11,6 +11,16 @@ set hlsearch 	" set nohlsearch :noh " hightlight results
 set incsearch 	" incremental search - show results while typing
 " set smartcase   " switch to case-sensitive search when uppercase letter is in your search term
 
+" File Searching
+set path+=** 	" find files in ur home path
+" Tweaks for browsing:
+let g:netrw_banner=0 		" disable annoying banner.
+let g:netrw_browse_split=4	" open in prior windows.
+let g:netrw_altv=1		" open splits to right.
+let g:netrw_liststyle=3		" tree view
+let g:netrw_list_hide=netrw_gitignore#Hide()
+let g:netrw_list_hide.=',\(^\|\s\s)\zs\.\S\+'
+
 " Syntax
 syntax on
 filetype plugin indent on " use the file type to determine the correct identation per lang
@@ -32,16 +42,6 @@ set nowrap " hide eol when doesn't fit
 " set lazyredraw  " Don’t update screen during macro and script execution.
 set hidden " cant explain it :h hidden :)
 
-" Searching
-set path+=** 	" find files in ur home path
-" Tweaks for browsing:
-let g:netrw_banner=0 		" disable annoying banner.
-let g:netrw_browse_split=4	" open in prior windows.
-let g:netrw_altv=1		" open splits to right.
-let g:netrw_liststyle=3		" tree view
-let g:netrw_list_hide=netrw_gitignore#Hide()
-let g:netrw_list_hide.=',\(^\|\s\s)\zs\.\S\+'
-
 " Interface Options
 set number relativenumber " Set Relative line Numbers
 
@@ -55,10 +55,10 @@ map <leader>j :wincmd j<CR>
 map <leader>k :wincmd k<CR>
 map <leader>l :wincmd l<CR>
 " Resize Splits
-map <leader>L :vertical res +5<CR>
-map <leader>K :res -5<CR>
-map <leader>J :res +5<CR>
-map <leader>H :vertical res -5<CR>
+map <leader>+ :vertical res +5<CR>
+map <leader>- :res -5<CR>
+map <leader>= :res +5<CR>
+map <leader>_ :vertical res -5<CR>
 
 " Disable Arrow keys in all modes, use hjkl
 " Disable Arrow keys in Normal mode
