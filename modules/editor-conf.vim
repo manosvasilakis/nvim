@@ -166,6 +166,8 @@ function LargeFile()
 	 setlocal buftype=nowrite
 	 " no undo possible
 	 setlocal undolevels=-1
+	 " no swap files
+	 set noswapfile
 	 " disable code completion
 	 CocDisable
 	 " display message

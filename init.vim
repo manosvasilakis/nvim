@@ -53,7 +53,6 @@ source ~/.config/nvim/modules/vimmove-conf.vim
 source ~/.config/nvim/modules/undotree-conf.vim
 
 "" Generic
-source ~/.config/nvim/modules/goyo-conf.vim
 source ~/.config/nvim/modules/vimwiki-conf.vim
 source ~/.config/nvim/modules/vimtablemode-conf.vim
 
@@ -62,5 +61,10 @@ source ~/.config/nvim/modules/gruvbox-conf.vim
 source ~/.config/nvim/modules/nerdtree-conf.vim
 
 "" Other configurations that do not need a custom file
+" FZF
 map <M-z> :FZF<CR>
+" Colorizer
 lua require'colorizer'.setup()
+" Goyo
+" map <leader>g :Goyo \| set bg=light \| set linebreak<CR>
+map <leader>g :Goyo \| set linebreak<CR>
