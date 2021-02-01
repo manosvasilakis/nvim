@@ -40,20 +40,16 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'junegunn/goyo.vim'		" Distraction-free writing in Vim
 call plug#end()
 
-" Vim Essentials
+" Vim Essential Settings
 source ~/.config/nvim/modules/editor-conf.vim
 
 " Plugin Configuration Modules
-"" Programming
+"" Programming Modules
 source ~/.config/nvim/modules/coc-conf.vim
 source ~/.config/nvim/modules/emmet-conf.vim
 
 "" Text Manipulation & Movements
-source ~/.config/nvim/modules/vimmove-conf.vim
 source ~/.config/nvim/modules/undotree-conf.vim
-
-"" Generic
-source ~/.config/nvim/modules/vimwiki-conf.vim
 source ~/.config/nvim/modules/vimtablemode-conf.vim
 
 "" Polishing
@@ -61,10 +57,4 @@ source ~/.config/nvim/modules/gruvbox-conf.vim
 source ~/.config/nvim/modules/nerdtree-conf.vim
 
 "" Other configurations that do not need a custom file
-" FZF
-map <M-z> :FZF<CR>
-" Colorizer
-lua require'colorizer'.setup()
-" Goyo
-" map <leader>g :Goyo \| set bg=light \| set linebreak<CR>
-map <leader>g :Goyo \| set linebreak<CR>
+source ~/.config/nvim/modules/other-conf.vim
