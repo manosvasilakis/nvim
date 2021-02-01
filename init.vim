@@ -32,6 +32,7 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'vimwiki/vimwiki'                  " Until org mode, will do the trick. ,ww -
 	Plug 'dhruvasagar/vim-table-mode'       " Easy Ascii Tables. ,tm -
 	Plug 'KabbAmine/vCoolor.vim'            " Color Picker
+	Plug 'glacambre/firenvim', { 'do': { _ -> firenvim#install(0) } } " embeded nvim browser
 	" Polishing
 	Plug 'gruvbox-community/gruvbox'	" best colorscheme known to human
 	Plug 'scrooloose/nerdtree'		" files tree
