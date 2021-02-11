@@ -1,0 +1,20 @@
+\documentclass[a4paper]{article}
+
+\usepackage[english,greek]{babel}
+\usepackage[utf8x]{inputenc}
+
+\title{}
+\author{Μάνος Βασιλάκης}
+\date{\today}
+
+\begin{document}
+
+	\maketitle
+	\begin{abstract}
+		...
+	\end{abstract}
+
+	\section{}
+
+	ΤΕΛΟΣ
+\end{document}

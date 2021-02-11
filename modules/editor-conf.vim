@@ -207,6 +207,7 @@ nnoremap .printf  :-1read $HOME/.config/nvim/skeletons/Printf<CR>
 nnoremap .!       :-1read $HOME/.config/nvim/skeletons/html/htmlskeleton<CR>6j8wla
 nnoremap .hlink   :-1read $HOME/.config/nvim/skeletons/html/link<CR>
 nnoremap .hstyle  :-1read $HOME/.config/nvim/skeletons/html/style<CR>
+nnoremap .tex     :-1read $HOME/.config/nvim/skeletons/latex<CR>5j6la
 
 " Replace all is aliased to S.
 nnoremap S :%s//g<Left><Left>
