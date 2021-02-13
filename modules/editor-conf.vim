@@ -197,17 +197,19 @@ let g:solarized_termcolors=256
 set termguicolors
 
 " Snippets
-nnoremap .py2     :-1read $HOME/.config/nvim/skeletons/py2skeleton<CR>ja
-nnoremap .py3     :-1read $HOME/.config/nvim/skeletons/py3skeleton<CR>ja
-nnoremap .sh      :-1read $HOME/.config/nvim/skeletons/sh<CR>ja
-nnoremap .bash    :-1read $HOME/.config/nvim/skeletons/bash<CR>ja
-nnoremap .zsh     :-1read $HOME/.config/nvim/skeletons/zsh<CR>ja
-nnoremap .go      :-1read $HOME/.config/nvim/skeletons/goskeleton<CR>4j3l
-nnoremap .printf  :-1read $HOME/.config/nvim/skeletons/Printf<CR>
-nnoremap .!       :-1read $HOME/.config/nvim/skeletons/html/htmlskeleton<CR>6j8wla
-nnoremap .hlink   :-1read $HOME/.config/nvim/skeletons/html/link<CR>
-nnoremap .hstyle  :-1read $HOME/.config/nvim/skeletons/html/style<CR>
-nnoremap .tex     :-1read $HOME/.config/nvim/skeletons/latex<CR>5j6la
+nnoremap .py2     :-1read $HOME/.config/nvim/snippets/py2skeleton<CR>ja
+nnoremap .py3     :-1read $HOME/.config/nvim/snippets/py3skeleton<CR>ja
+nnoremap .sh      :-1read $HOME/.config/nvim/snippets/sh<CR>ja
+nnoremap .bash    :-1read $HOME/.config/nvim/snippets/bash<CR>ja
+nnoremap .zsh     :-1read $HOME/.config/nvim/snippets/zsh<CR>ja
+nnoremap .go      :-1read $HOME/.config/nvim/snippets/goskeleton<CR>4j3l
+nnoremap .printf  :-1read $HOME/.config/nvim/snippets/Printf<CR>
+nnoremap .!       :-1read $HOME/.config/nvim/snippets/html/htmlskeleton<CR>6j8wla
+nnoremap .hlink   :-1read $HOME/.config/nvim/snippets/html/link<CR>
+nnoremap .hstyle  :-1read $HOME/.config/nvim/snippets/html/style<CR>
+nnoremap .tex     :-1read $HOME/.config/nvim/snippets/latex/latex<CR>5j6la
+nnoremap .greek   :-1read $HOME/.config/nvim/snippets/latex/greek<CR>
+nnoremap .eng     :-1read $HOME/.config/nvim/snippets/latex/eng<CR>
 
 " Replace all is aliased to S.
 nnoremap S :%s//g<Left><Left>
