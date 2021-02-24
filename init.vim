@@ -22,6 +22,11 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'mattn/emmet-vim'			" Emmet Snippets
 	Plug 'tpope/vim-commentary' 		" Comment stuff out. gcc - gc - gcap - etc...
 	Plug 'tpope/vim-surround'               " cs[{, ds', ysW(, ...
+	"| Laravel Support                      "| Laravel Support
+	Plug 'tpope/vim-dispatch'               "| Optional
+	Plug 'tpope/vim-projectionist'          "|
+	Plug 'noahfrederick/vim-composer'       "|
+	Plug 'noahfrederick/vim-laravel'        "|
 	" Generic
 	Plug 'mbbill/undotree'                  " Useful emacs bloat
 	Plug 'matze/vim-move'			" Drag Lines Arround suckit VScode
