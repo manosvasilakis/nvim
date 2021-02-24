@@ -1,6 +1,5 @@
 {
 	"languageserver": {
-		// PHP
 		"intelephense": {
 			"command": "intelephense",
 			"args": ["--stdio"],
@@ -10,10 +9,8 @@
 			}
 		}
 	},
-	// Golang
 	"go.goplsOptions": {
 		"completionDocumentation": true
 	},
-	// webdev
 	"html.autoClosingTags": true
 }
